@@ -5,7 +5,7 @@ var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var combined = [];
-
+var minimum = 1
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -49,7 +49,7 @@ function generatePassword() {
   var numbersP = confirm("Would you like numeric characters?")
 
   if (numbersP == true) {
-    c ombined.push(...numbers);
+    combined.push(...numbers);
     // console.log(combined);
   }
 
