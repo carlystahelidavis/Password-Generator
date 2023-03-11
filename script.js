@@ -18,6 +18,8 @@ function passwordLength(numAmount) {
   var str = '';
   for (var i = 0; i < numAmount; i++) {
     str += combined[i]
+    var index = Math.floor(Math.random() * arr.length);
+    str += arr[index];
     console.log(str);
   }
   return str;
