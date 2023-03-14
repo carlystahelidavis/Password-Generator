@@ -6,7 +6,7 @@ var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"
 var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 var combined = [];
 var minimum = 1
-// Write password to the #password input
+// Password Input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -14,6 +14,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// For Loop to generate passwords with using math.random/math.floor to use items in selected arrays
 function passwordLength(numAmount) {
   var str = '';
   for (var i = 0; i < combined.length; i++) {
@@ -32,6 +33,7 @@ function passwordLength(numAmount) {
   return str;
 }
 
+// Functions to ask characteristics on what goes into the passwords
 function generatePassword() {
   var lenthP = Number(prompt("How many characters do you want in your password?  It must be between 8 and 128 characters."));
 
@@ -66,5 +68,5 @@ function generatePassword() {
   return answer;
 }
 
-//Add event listener to generate button
+//An event listener to generate button
 generateBtn.addEventListener("click", writePassword);
