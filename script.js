@@ -16,12 +16,19 @@ function writePassword() {
 
 function passwordLength(numAmount) {
   var str = '';
-  for (var i = 0; i < numAmount; i++) {
-    str += combined[i]
-    var index = Math.floor(Math.random() * arr.length);
+  for (var i = 0; i < combined.length; i++) {
+    var arr = combined[i];
+    var index = Math.floor(Math.random() * (arr.length - 1));
     str += arr[index];
-    console.log(str);
   }
+  for (var i = 0; i < numAmount - combined.length; i++) {
+    var index = Math.floor(Math.random() * (combined.length - 1));
+    var arr = combined[index];
+    var value = Math.floor(Math.random() * (arr.length - 1));
+    str += arr[value];
+  }
+  console.log(str.length);
+
   return str;
 }
 
